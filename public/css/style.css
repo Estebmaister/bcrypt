@@ -1,0 +1,111 @@
+/* the 'body' selector is required for the tests to pass */
+/* You can change the style attributes if you want */
+:root {
+  --space-root: 1rem;
+  --space-xs: calc(var(--space-root) / 2);
+  --space-s: calc(var(--space-root) / 1.5);
+  --space-m: var(--space-root);
+  --space-l: calc(var(--space-root) * 1.5);
+  --space-xl: calc(var(--space-root) * 2);
+  --color-primary: mediumslateblue;
+  --color-secondary: black;
+  --color-tertiary: #222;
+  --color-contrast: #ddd;
+  --base-border-radius: 0.25rem;
+  --ease: cubic-bezier(0.075, 0.82, 0.165, 1);
+  --duration: 350ms;
+  --font-family: sans-serif;
+  --font-size: 1.25rem;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  height: 100vh;
+  color: var(--color-contrast);
+  padding: var(--space-m);
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  line-height: 1.2;
+  background-color: var(--color-tertiary);
+}
+
+header {
+  text-align: center;
+}
+
+a {
+  color: var(--color-primary);
+}
+
+a:focus {
+  color: var(--color-secondary);
+}
+
+h1 {
+  font-weight: 700;
+  font-size: calc(var(--font-size) * 2.5);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-family: var(--font-family)
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+a:hover {
+  color: var(--color-contrast);
+}
+a:hover + .arrow {
+  opacity: 1;
+  transform: none;
+}
+.arrow {
+  display: inline-block;
+  opacity: 0;
+  margin-left: 0.125rem;
+  transform: translateX(-0.375rem);
+  transition: all 250ms ease-out;
+}
+a:focus {
+  color: var(--color-secondary);
+}
+
+/* Little cat */
+.cat {
+  --size: 100;
+  --unit: calc((var(--size) / 470) * 1vmin);
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  width: calc(75 * var(--unit));
+  height: calc(75 * var(--unit));
+}
+.cat .pupil {
+  fill: var(--color-primary);
+  fill: rgb(60, 119, 230);
+  fill: #090909;
+}
+.cat .inner-pupil {
+  fill: #000;
+}
+.cat .outer-pupil-body {
+  fill: transparent;
+  stroke: #090909;
+}
+.cat .outer-pupil {
+  fill: var(--color-primary);
+  fill: rgb(143, 222, 253);
+}
+.cat .body-cat {
+  fill: #090909;
+}
+.cat .nose {
+  fill: #faccfb;
+}
