@@ -1,4 +1,4 @@
-# Applied InfoSec Challenges for FCC project part 2
+# Applied InfoSec Challenges for FCC part 2
 
 =============================================
 
