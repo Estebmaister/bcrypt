@@ -1,5 +1,6 @@
-/* the 'body' selector is required for the tests to pass */
-/* You can change the style attributes if you want */
+@import "form.css";
+@import "littleCat.css";
+
 :root {
   --space-root: 1rem;
   --space-xs: calc(var(--space-root) / 2);
@@ -14,7 +15,7 @@
   --base-border-radius: 0.25rem;
   --ease: cubic-bezier(0.075, 0.82, 0.165, 1);
   --duration: 350ms;
-  --font-family: sans-serif;
+  --font-family: "Roboto", sans-serif;
   --font-size: 1.25rem;
 }
 * {
@@ -38,14 +39,6 @@ header {
   text-align: center;
 }
 
-a {
-  color: var(--color-primary);
-}
-
-a:focus {
-  color: var(--color-secondary);
-}
-
 h1 {
   font-weight: 700;
   font-size: calc(var(--font-size) * 2.5);
@@ -54,7 +47,7 @@ h1 {
 a {
   text-decoration: none;
   color: var(--color-primary);
-  font-family: var(--font-family)
+  font-family: -apple-system, Roboto, sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   text-align: center;
@@ -75,37 +68,4 @@ a:hover + .arrow {
 }
 a:focus {
   color: var(--color-secondary);
-}
-
-/* Little cat */
-.cat {
-  --size: 100;
-  --unit: calc((var(--size) / 470) * 1vmin);
-  position: fixed;
-  bottom: 1%;
-  right: 1%;
-  width: calc(75 * var(--unit));
-  height: calc(75 * var(--unit));
-}
-.cat .pupil {
-  fill: var(--color-primary);
-  fill: rgb(60, 119, 230);
-  fill: #090909;
-}
-.cat .inner-pupil {
-  fill: #000;
-}
-.cat .outer-pupil-body {
-  fill: transparent;
-  stroke: #090909;
-}
-.cat .outer-pupil {
-  fill: var(--color-primary);
-  fill: rgb(143, 222, 253);
-}
-.cat .body-cat {
-  fill: #090909;
-}
-.cat .nose {
-  fill: #faccfb;
 }
