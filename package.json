@@ -14,7 +14,7 @@
 		"bcrypt": "^5.0.0",
 		"body-parser": "^1.16.0",
 		"cors": "^2.8.1",
-		"express": "^4.14.1",
+		"express": "^4.17.3",
 		"helmet": "^3.4.0",
 		"mongodb": "^3.5.8"
 	},
